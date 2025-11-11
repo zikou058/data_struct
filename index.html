@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Lister - Vanilla JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Item Lister</h1>
+            <p class="subtitle">Add, Delete, and Filter Items</p>
+        </header>
+
+        <div class="card">
+            <h2>Add New Item</h2>
+            <form id="addForm">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        id="itemInput" 
+                        placeholder="Enter item name..."
+                        autocomplete="off"
+                    >
+                    <button type="submit" class="btn btn-primary">Add Item</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Search Items</h2>
+            <div class="form-group">
+                <input 
+                    type="text" 
+                    id="filterInput" 
+                    placeholder="Search for items..."
+                    autocomplete="off"
+                >
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="list-header">
+                <h2>Items</h2>
+                <span id="itemCount" class="item-count">0 items</span>
+            </div>
+            <ul id="itemList" class="item-list">
+                <!-- Items will be added here dynamically -->
+            </ul>
+            <div id="emptyState" class="empty-state">
+                <p>No items yet. Add your first item above!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
